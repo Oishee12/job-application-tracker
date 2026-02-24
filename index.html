@@ -12,6 +12,8 @@
     <!-- daisyUI and Tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome cdn -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         * {
@@ -30,10 +32,15 @@
             color: #EF4444;
         }
 
-        .btn{
+        .grey {
+            color: #64748B;
+        }
+
+        .button {
             background-color: white;
         }
-        .btn:hover {
+
+        .button:hover {
             background-color: blue;
             color: white;
         }
@@ -69,9 +76,35 @@
             </div>
 
             <div class="flex gap-8 mb-4">
-                <button class="btn text-newtral px-14">All</button>
-                <button class="btn text-newtral px-10">Interview</button>
-                <button class="btn text-newtral px-10">Rejected</button>
+                <button class="button btn text-newtral px-14">All</button>
+                <button class="button btn text-newtral px-10">Interview</button>
+                <button class="button btn text-newtral px-10">Rejected</button>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="bg-white p-3 my-3 rounded-lg">
+                    <div class="flex justify-between">
+                        <h3 class="text-lg font-bold">Mobile First Corp</h3>
+                        <div class="border border-gray-400 h-7 w-7 flex justify-center items-center rounded-full"><i class="fa-regular fa-trash-can"></i></div>
+                    </div>
+                    <p class="grey">React Native Developer</p><br>
+                    <div class="flex gap-3 justify-start items-center">
+                        <p class="grey">Remote</p>
+                        <p class="bg-[#64748B] h-[6px] w-[6px] rounded-full"></p>
+                        <p class="grey">Full-time</p>
+                        <p class="bg-[#64748B] h-[6px] w-[6px] rounded-full"></p>
+                        <p class="grey">$130,000 - $175,000</p> <br>
+                    </div><br>
+                    <button class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
+                    <p class="grey">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <br>
+                    <button class="btn btn-outline btn-success">Interview</button>
+                    <button class="btn btn-outline btn-error">
+                        Rejected
+                    </button>
+                </div>
             </div>
         </section>
     </section>
