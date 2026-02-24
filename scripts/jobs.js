@@ -1,11 +1,3 @@
-// document.getElementById('first-job-interview').addEventListener('click', function(){
-//     const hidden = document.getElementById('first-job-interview-hidden');
-//     hidden.classList.remove('hidden');
-//     const show = document.getElementById('first-job-interview-show');
-//     show.classList.add('hidden');
-// });
-
-
 hiddenAndShow('first-job-interview',
     'first-job-interview-hidden',
     'first-job-interview-show',
