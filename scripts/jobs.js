@@ -1,3 +1,104 @@
+// document.getElementById('first-job-interview').addEventListener('click', function(){
+//     const hidden = document.getElementById('first-job-interview-hidden');
+//     hidden.classList.remove('hidden');
+//     const show = document.getElementById('first-job-interview-show');
+//     show.classList.add('hidden');
+// });
+
+
 hiddenAndShow('first-job-interview',
-     'first-job-interview-hidden',
-      'first-job-interview-show');
+    'first-job-interview-hidden',
+    'first-job-interview-show',
+    'first-job-rejected-hidden',
+    'interview-number');
+
+hiddenAndShow('first-job-rejected',
+    'first-job-rejected-hidden',
+    'first-job-interview-show',
+    'first-job-interview-hidden',
+    'Rejected-number'
+)
+hiddenAndShow('second-job-interview',
+    'second-job-interview-hidden',
+    'second-job-interview-show',
+    'second-job-rejected-hidden',
+    'interview-number');
+
+hiddenAndShow('second-job-rejected',
+    'second-job-rejected-hidden',
+    'second-job-interview-show',
+    'second-job-interview-hidden',
+    'Rejected-number'
+)
+hiddenAndShow('third-job-interview',
+    'third-job-interview-hidden',
+    'third-job-interview-show',
+    'third-job-rejected-hidden',
+    'interview-number');
+
+hiddenAndShow('third-job-rejected',
+    'third-job-rejected-hidden',
+    'third-job-interview-show',
+    'third-job-interview-hidden',
+    'Rejected-number'
+)
+hiddenAndShow('forth-job-interview',
+    'forth-job-interview-hidden',
+    'forth-job-interview-show',
+    'forth-job-rejected-hidden',
+    'interview-number');
+
+hiddenAndShow('forth-job-rejected',
+    'forth-job-rejected-hidden',
+    'forth-job-interview-show',
+    'forth-job-interview-hidden',
+    'Rejected-number'
+)
+hiddenAndShow('fifth-job-interview',
+    'fifth-job-interview-hidden',
+    'fifth-job-interview-show',
+    'fifth-job-rejected-hidden',
+    'interview-number');
+
+hiddenAndShow('fifth-job-rejected',
+    'fifth-job-rejected-hidden',
+    'fifth-job-interview-show',
+    'fifth-job-interview-hidden',
+    'Rejected-number'
+)
+hiddenAndShow('sixth-job-interview',
+    'sixth-job-interview-hidden',
+    'sixth-job-interview-show',
+    'sixth-job-rejected-hidden',
+    'interview-number');
+
+hiddenAndShow('sixth-job-rejected',
+    'sixth-job-rejected-hidden',
+    'sixth-job-interview-show',
+    'sixth-job-interview-hidden',
+    'Rejected-number'
+)
+hiddenAndShow('seventh-job-interview',
+    'seventh-job-interview-hidden',
+    'seventh-job-interview-show',
+    'seventh-job-rejected-hidden',
+    'interview-number');
+
+hiddenAndShow('seventh-job-rejected',
+    'seventh-job-rejected-hidden',
+    'seventh-job-interview-show',
+    'seventh-job-interview-hidden',
+    'Rejected-number'
+)
+hiddenAndShow('eighth-job-interview',
+    'eighth-job-interview-hidden',
+    'eighth-job-interview-show',
+    'eighth-job-rejected-hidden',
+    'interview-number');
+
+hiddenAndShow('eighth-job-rejected',
+    'eighth-job-rejected-hidden',
+    'eighth-job-interview-show',
+    'eighth-job-interview-hidden',
+    'Rejected-number'
+)
