@@ -25,11 +25,3 @@ document.getElementById(btnId)
 })
 }
 
-function showOnly(){
-    const firstJob = document.getElementById('first-job');
-    firstJob.classList.add('hidden');
-    const selected = document.getElementById();
-    selected.classList.remove('hidden');
-}
-
-
