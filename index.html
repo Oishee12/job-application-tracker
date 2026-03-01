@@ -13,7 +13,9 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- font awesome cdn -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         * {
@@ -35,75 +37,73 @@
         .grey {
             color: #64748B;
         }
-
-        .button {
-            background-color: white;
-        }
-
-        .button:hover {
-            background-color: blue;
-            color: white;
-        }
     </style>
 </head>
 
 <body>
-    <section class="lg:max-w-[1280px] mx-auto pt-10">
+    <section class="lg:max-w-[1280px] mx-auto">
         <!-- navbar -->
         <div class="sticky top-0 z-10 bg-[#EEF4FF]">
-            <h1 class="text-2xl font-bold mb-2">
-            Job Application Tracker</h1>
-        <div class="grid grid-cols-3 gap-5 justify-end">
-            <div class="bg-white p-3 my-3 rounded-lg">
-                <h3 class="">Total</h3>
-                <p class="text-lg font-bold">8</p>
+            <h1 class="text-2xl font-bold">
+                Job Application Tracker</h1>
+            <div class="grid grid-cols-3 gap-5 justify-end mb-3">
+                <div class="bg-white p-3 my-3 rounded-lg">
+                    <h3 class="">Total</h3>
+                    <p class="text-lg font-bold">8</p>
+                </div>
+                <div class="bg-white p-3 m-3 rounded-lg">
+                    <h3 class="">Interview</h3>
+                    <p id="interview-number" class="text-lg font-bold green">0</p>
+                </div>
+                <div class="bg-white p-3 m-3 rounded-lg">
+                    <h3 class="">Rejected</h3>
+                    <p id="Rejected-number" class="text-lg font-bold red">0</p>
+                </div>
             </div>
-            <div class="bg-white p-3 m-3 rounded-lg">
-                <h3 class="">Interview</h3>
-                <p id="interview-number" class="text-lg font-bold green">0</p>
-            </div>
-            <div class="bg-white p-3 m-3 rounded-lg">
-                <h3 class="">Rejected</h3>
-                <p id="Rejected-number" class="text-lg font-bold red">0</p>
-            </div>
+
+            <hr class="border border-gray-200 mb-3">
+
+            <!-- Available job section -->
+            <section>
+                <div class="flex justify-between">
+                    <h1 class="text-xl font-bold mb-2">Available Job</h1>
+                    <p>8 Jobs</p>
+                </div>
+                <div class="flex gap-2 lg:gap-8 mb-4">
+
+                    <!-- three buttons here -->
+                    <button id="tab-all" onclick="switchedTab('all')"
+                        class="button btn text-newtral px-4 lg:px-14">All</button>
+                    <button id="tab-interview" onclick="switchedTab('interview')"
+                        class="button btn text-newtral px-4 lg:px-10">Interview</button>
+                    <button id="tab-rejected" onclick="switchedTab('rejected')"
+                        class="button btn text-newtral px-4 lg:px-10">Rejected</button>
+                </div>
+            </section>
         </div>
-
-        <br><hr class="border border-gray-200"><br>
-        </div>
-
-        <!-- Available job section -->
-        <section>
-            <div class="flex justify-between">
-                <h1 class="text-xl font-bold mb-2">Available Job</h1>
-                <p>8 Jobs</p>
-            </div>
-
-            <!-- three buttons here -->
-            <div class="flex gap-2 lg:gap-8 mb-4">
-                <button class="button btn text-newtral px-4 lg:px-14">All</button>
-                <button id="interview-btn" class="button btn text-newtral px-4 lg:px-10">Interview</button>
-                <button class="button btn text-newtral px-4 lg:px-10">Rejected</button>
-            </div>
-        </section>
 
         <!-- all job circular here -->
-        <section class="my-5 mb-18">
-            <div id="first-job">
-                <div class="bg-white p-3 my-6 rounded-lg">
+        <section class="pb-6">
+            <div>
+                <div class="bg-white p-3 my-10 rounded-lg border border-gray-300">
                     <div class="flex justify-between">
                         <h3 class="text-lg font-bold">Mobile First Corp</h3>
-                        <div class="border border-gray-400 h-7 w-7 flex justify-center items-center rounded-full"><i class="fa-regular fa-trash-can"></i></div>
+                        <div class="border border-gray-400 h-7 w-7 flex justify-center items-center rounded-full"><i
+                                class="fa-regular fa-trash-can"></i></div>
                     </div>
                     <p class="grey">React Native Developer</p><br>
-                    
+
                     <p class="grey">Remote • Full-time • $130,000 - $175,000</p>
                     <br>
-                    <button id="first-job-interview-show" class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
-                    <button id="first-job-interview-hidden" class="btn btn-outline btn-success hidden">Interview</button>
+                    <button id="first-job-interview-show"
+                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
+                    <button id="first-job-interview-hidden"
+                        class="btn btn-outline btn-success hidden">Interview</button>
                     <button id="first-job-rejected-hidden" class="btn btn-outline btn-error hidden">
                         Rejected
                     </button>
-                    <p class="grey">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <p class="grey">Build cross-platform mobile applications using React Native. Work on products used
+                        by millions of users worldwide.</p>
                     <br>
                     <button id="first-job-interview" class="btn btn-outline btn-success">Interview</button>
                     <button id="first-job-rejected" class="btn btn-outline btn-error">
@@ -111,20 +111,24 @@
                     </button>
                 </div>
             </div>
-            <div id="second-job">
-                <div class="bg-white p-3 my-6 rounded-lg">
+            <div class="hidden">
+                <div class="bg-white p-3 my-10 rounded-lg border border-gray-300">
                     <div class="flex justify-between">
                         <h3 class="text-lg font-bold">WebFlow Agency</h3>
-                        <div class="border border-gray-400 h-7 w-7 flex justify-center items-center rounded-full"><i class="fa-regular fa-trash-can"></i></div>
+                        <div class="border border-gray-400 h-7 w-7 flex justify-center items-center rounded-full"><i
+                                class="fa-regular fa-trash-can"></i></div>
                     </div>
                     <p class="grey">Web Designer & Developer</p><br>
                     <p class="grey">Los Angeles, CA • Part-time • $80,000 - $120,000</p><br>
-                    <button id="second-job-interview-show" class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
-                    <button id="second-job-interview-hidden" class="btn btn-outline btn-success hidden">Interview</button>
+                    <button id="second-job-interview-show"
+                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
+                    <button id="second-job-interview-hidden"
+                        class="btn btn-outline btn-success hidden">Interview</button>
                     <button id="second-job-rejected-hidden" class="btn btn-outline btn-error hidden">
                         Rejected
                     </button>
-                    <p class="grey">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                    <p class="grey">Create stunning web experiences for high-profile clients. Must have portfolio and
+                        experience with modern web design trends.</p>
                     <br>
                     <button id="second-job-interview" class="btn btn-outline btn-success">Interview</button>
                     <button id="second-job-rejected" class="btn btn-outline btn-error">
@@ -132,21 +136,25 @@
                     </button>
                 </div>
             </div>
-            <div id="third-job">
-                <div class="bg-white p-3 my-6 rounded-lg">
+            <div class="hidden">
+                <div class="bg-white p-3 my-10 rounded-lg border border-gray-300">
                     <div class="flex justify-between">
                         <h3 class="text-lg font-bold">DataViz Solutions</h3>
-                        <div class="border border-gray-400 h-7 w-7 flex justify-center items-center rounded-full"><i class="fa-regular fa-trash-can"></i></div>
+                        <div class="border border-gray-400 h-7 w-7 flex justify-center items-center rounded-full"><i
+                                class="fa-regular fa-trash-can"></i></div>
                     </div>
                     <p class="grey">Data Visualization Specialist</p><br>
                     <p class="grey">Boston, MA • Full-time • $125,000 - $165,000</p>
                     <br>
-                    <button id="third-job-interview-show" class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
-                    <button id="third-job-interview-hidden" class="btn btn-outline btn-success hidden">Interview</button>
+                    <button id="third-job-interview-show"
+                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
+                    <button id="third-job-interview-hidden"
+                        class="btn btn-outline btn-success hidden">Interview</button>
                     <button id="third-job-rejected-hidden" class="btn btn-outline btn-error hidden">
                         Rejected
                     </button>
-                    <p class="grey">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+                    <p class="grey">Transform complex data into compelling visualizations. Required skills: D3.js,
+                        React, and strong analytical thinking.</p>
                     <br>
                     <button id="third-job-interview" class="btn btn-outline btn-success">Interview</button>
                     <button id="third-job-rejected" class="btn btn-outline btn-error">
@@ -154,21 +162,25 @@
                     </button>
                 </div>
             </div>
-            <div>
-                <div class="bg-white p-3 my-6 rounded-lg">
+            <div class="hidden">
+                <div class="bg-white p-3 my-10 rounded-lg border border-gray-300">
                     <div class="flex justify-between">
                         <h3 class="text-lg font-bold">CloudFirst Inc</h3>
-                        <div class="border border-gray-400 h-7 w-7 flex justify-center items-center rounded-full"><i class="fa-regular fa-trash-can"></i></div>
+                        <div class="border border-gray-400 h-7 w-7 flex justify-center items-center rounded-full"><i
+                                class="fa-regular fa-trash-can"></i></div>
                     </div>
                     <p class="grey">Backend Developer</p><br>
                     <p class="grey">Seattle, WA • Full-time • $140,000 - $190,000</p>
                     <br>
-                    <button id="forth-job-interview-show" class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
-                    <button id="forth-job-interview-hidden" class="btn btn-outline btn-success hidden">Interview</button>
+                    <button id="forth-job-interview-show"
+                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
+                    <button id="forth-job-interview-hidden"
+                        class="btn btn-outline btn-success hidden">Interview</button>
                     <button id="forth-job-rejected-hidden" class="btn btn-outline btn-error hidden">
                         Rejected
                     </button>
-                    <p class="grey">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                    <p class="grey">Design and maintain scalable backend systems using Python and AWS. Work with modern
+                        DevOps practices and cloud infrastructure.</p>
                     <br>
                     <button id="forth-job-interview" class="btn btn-outline btn-success">Interview</button>
                     <button id="forth-job-rejected" class="btn btn-outline btn-error">
@@ -176,20 +188,24 @@
                     </button>
                 </div>
             </div>
-            <div>
-                <div class="bg-white p-3 my-6 rounded-lg">
+            <div class="hidden">
+                <div class="bg-white p-3 my-10 rounded-lg border border-gray-300">
                     <div class="flex justify-between">
                         <h3 class="text-lg font-bold">Innovation Labs</h3>
-                        <div class="border border-gray-400 h-7 w-7 flex justify-center items-center rounded-full"><i class="fa-regular fa-trash-can"></i></div>
+                        <div class="border border-gray-400 h-7 w-7 flex justify-center items-center rounded-full"><i
+                                class="fa-regular fa-trash-can"></i></div>
                     </div>
                     <p class="grey">UI/UX Engineer</p><br>
                     <p class="grey">Austin, TX • Full-time • $110,000 - $150,000</p><br>
-                    <button id="fifth-job-interview-show" class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
-                    <button id="fifth-job-interview-hidden" class="btn btn-outline btn-success hidden">Interview</button>
+                    <button id="fifth-job-interview-show"
+                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
+                    <button id="fifth-job-interview-hidden"
+                        class="btn btn-outline btn-success hidden">Interview</button>
                     <button id="fifth-job-rejected-hidden" class="btn btn-outline btn-error hidden">
                         Rejected
                     </button>
-                    <p class="grey">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+                    <p class="grey">Create beautiful and functional user interfaces for our suite of products. Strong
+                        design skills and frontend development expertise required.</p>
                     <br>
                     <button id="fifth-job-interview" class="btn btn-outline btn-success">Interview</button>
                     <button id="fifth-job-rejected" class="btn btn-outline btn-error">
@@ -197,20 +213,24 @@
                     </button>
                 </div>
             </div>
-            <div>
-                <div class="bg-white p-3 my-6 rounded-lg">
+            <div class="hidden">
+                <div class="bg-white p-3 my-10 rounded-lg border border-gray-300">
                     <div class="flex justify-between">
                         <h3 class="text-lg font-bold">MegaCorp Solutions</h3>
-                        <div class="border border-gray-400 h-7 w-7 flex justify-center items-center rounded-full"><i class="fa-regular fa-trash-can"></i></div>
+                        <div class="border border-gray-400 h-7 w-7 flex justify-center items-center rounded-full"><i
+                                class="fa-regular fa-trash-can"></i></div>
                     </div>
                     <p class="grey">JavaScript Developer</p><br>
                     <p class="grey">New York, NY • Full-time • $130,000 - $170,00</p><br>
-                    <button id="sixth-job-interview-show" class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
-                    <button id="sixth-job-interview-hidden" class="btn btn-outline btn-success hidden">Interview</button>
+                    <button id="sixth-job-interview-show"
+                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
+                    <button id="sixth-job-interview-hidden"
+                        class="btn btn-outline btn-success hidden">Interview</button>
                     <button id="sixth-job-rejected-hidden" class="btn btn-outline btn-error hidden">
                         Rejected
                     </button>
-                    <p class="grey">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+                    <p class="grey">Build enterprise applications with JavaScript and modern frameworks. We offer
+                        competitive compensation, health insurance, and professional development opportunities.</p>
                     <br>
                     <button id="sixth-job-interview" class="btn btn-outline btn-success">Interview</button>
                     <button id="sixth-job-rejected" class="btn btn-outline btn-error">
@@ -218,20 +238,24 @@
                     </button>
                 </div>
             </div>
-            <div>
-                <div class="bg-white p-3 my-6 rounded-lg">
+            <div class="hidden">
+                <div class="bg-white p-3 my-10 rounded-lg border border-gray-300">
                     <div class="flex justify-between">
                         <h3 class="text-lg font-bold">StartupXYZ</h3>
-                        <div class="border border-gray-400 h-7 w-7 flex justify-center items-center rounded-full"><i class="fa-regular fa-trash-can"></i></div>
+                        <div class="border border-gray-400 h-7 w-7 flex justify-center items-center rounded-full"><i
+                                class="fa-regular fa-trash-can"></i></div>
                     </div>
                     <p class="grey">Full Stack Engineer</p><br>
                     <p class="grey">Remote • Full-time • $120,000 - $160,000</p><br>
-                    <button id="seventh-job-interview-show" class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
-                    <button id="seventh-job-interview-hidden" class="btn btn-outline btn-success hidden">Interview</button>
+                    <button id="seventh-job-interview-show"
+                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
+                    <button id="seventh-job-interview-hidden"
+                        class="btn btn-outline btn-success hidden">Interview</button>
                     <button id="seventh-job-rejected-hidden" class="btn btn-outline btn-error hidden">
                         Rejected
                     </button>
-                    <p class="grey">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+                    <p class="grey">Join our fast-growing startup and work on our core platform. Experience with Node.js
+                        and React required. Great benefits and equity package included.</p>
                     <br>
                     <button id="seventh-job-interview" class="btn btn-outline btn-success">Interview</button>
                     <button id="seventh-job-rejected" class="btn btn-outline btn-error">
@@ -239,20 +263,25 @@
                     </button>
                 </div>
             </div>
-            <div>
-                <div class="bg-white p-3 my-6 rounded-lg">
+            <div class="hidden">
+                <div class="bg-white p-3 my-10 rounded-lg border border-gray-300">
                     <div class="flex justify-between">
                         <h3 class="text-lg font-bold">TechCorp Industries</h3>
-                        <div class="border border-gray-400 h-7 w-7 flex justify-center items-center rounded-full"><i class="fa-regular fa-trash-can"></i></div>
+                        <div class="border border-gray-400 h-7 w-7 flex justify-center items-center rounded-full"><i
+                                class="fa-regular fa-trash-can"></i></div>
                     </div>
                     <p class="grey">Senior Frontend Developer</p><br>
                     <p class="grey">San Francisco, CA • Full-time • $130,000 - $175,000</p><br>
-                    <button id="eighth-job-interview-show" class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
-                    <button id="eighth-job-interview-hidden" class="btn btn-outline btn-success hidden">Interview</button>
+                    <button id="eighth-job-interview-show"
+                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
+                    <button id="eighth-job-interview-hidden"
+                        class="btn btn-outline btn-success hidden">Interview</button>
                     <button id="eighth-job-rejected-hidden" class="btn btn-outline btn-error hidden">
                         Rejected
                     </button>
-                    <p class="grey">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+                    <p class="grey">We are looking for an experienced Frontend Developer to build scalable web
+                        applications using React and TypeScript. You will work with a talented team on cutting-edge
+                        projects.</p>
                     <br>
                     <button id="eighth-job-interview" class="btn btn-outline btn-success">Interview</button>
                     <button id="eighth-job-rejected" class="btn btn-outline btn-error">
@@ -261,9 +290,34 @@
                 </div>
             </div>
         </section>
+
+        <!-- interview -->
+        <section class="hidden">
+            <h1>interview section</h1>
+        </section>
+
+        <br>
+
+        <!-- rejected -->
+        <section class="hidden">
+            <h1>rejected section</h1>
+        </section>
+
+        <!-- no jobs available section -->
+        <section class="hidden">
+            <div class="bg-white flex justify-center items-center py-6">
+                <div>
+                    <div class="flex justify-center items-center">
+                        <img src="./jobs.png" alt="">
+                    </div>
+                    <h1 class="text-center text-2xl font-bold">No jobs available</h1>
+                    <p class="text-center grey">Check back soon for new job opportunities</p>
+                </div>
+            </div>
+        </section>
     </section>
-    <script src="./scripts/machine.js"></script>
-    <script src="./scripts/jobs.js"></script>
+
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>
