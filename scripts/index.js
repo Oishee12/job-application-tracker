@@ -37,3 +37,6 @@ function switchedTab(tab){
     }
 }
 switchedTab(currentTab);
+
+const total = document.getElementById('total-job');
+total.innerText = allJob.children.length;
