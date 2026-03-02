@@ -45,6 +45,7 @@ total.innerText = allJob.children.length;
 document.getElementById('jobs-container').addEventListener('click', function(event){
     const clickedElement  = event.target;
     const card = clickedElement.closest(".job-card");
+    const parent = card.parentNode;
     const status = card.querySelector(".not-applied-btn");
     if(clickedElement.classList.contains('interview')){
          allInterview.appendChild(card);
@@ -55,6 +56,7 @@ document.getElementById('jobs-container').addEventListener('click', function(eve
         status.innerText = "Rejected";
     }
     if(clickedElement.classList.contains('delete')){
-        
+        // console.log(parent);
+        parent.removeChild(card);
     }
 })
