@@ -37,9 +37,6 @@ function switchedTab(tab){
     }
 }
 switchedTab(currentTab);
-// 8 shows in the total badge
-const total = document.getElementById('total-job');
-total.innerText = allJob.children.length;
 
 // event delegation for interview, rejected and delete btn
 document.getElementById('jobs-container').addEventListener('click', function(event){
@@ -47,16 +44,31 @@ document.getElementById('jobs-container').addEventListener('click', function(eve
     const card = clickedElement.closest(".job-card");
     const parent = card.parentNode;
     const status = card.querySelector(".not-applied-btn");
+
     if(clickedElement.classList.contains('interview')){
          allInterview.appendChild(card);
          status.innerText = "Interview";
+         stateUpdate();
     }
     if(clickedElement.classList.contains('rejected')){
         allReject.appendChild(card);
         status.innerText = "Rejected";
+        stateUpdate();
     }
     if(clickedElement.classList.contains('delete')){
-        // console.log(parent);
         parent.removeChild(card);
+        stateUpdate();
     }
 })
+
+// state function
+function stateUpdate(){
+    const totalState = document.getElementById('total-state');
+    const interviewState = document.getElementById('interview-state');
+    const rejectedState = document.getElementById('rejected-state');
+
+    totalState.innerText = allJob.children.length;
+    interviewState.innerText = allInterview.children.length;
+    rejectedState.innerText = allReject.children.length;
+}
+stateUpdate();
