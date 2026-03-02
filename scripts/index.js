@@ -42,15 +42,17 @@ const total = document.getElementById('total-job');
 total.innerText = allJob.children.length;
 
 // event delegation for interview, rejected and delete btn
-document.getElementById('all-job').addEventListener('click', function(event){
+document.getElementById('jobs-container').addEventListener('click', function(event){
     const clickedElement  = event.target;
+    const card = clickedElement.closest(".job-card");
+    const status = card.querySelector(".not-applied-btn");
     if(clickedElement.classList.contains('interview')){
-       const individualInterview = clickedElement.closest(".job-card");
-         allInterview.appendChild(individualInterview);
+         allInterview.appendChild(card);
+         status.innerText = "Interview";
     }
     if(clickedElement.classList.contains('rejected')){
-        const individualRejected = clickedElement.closest(".job-card");
-        allReject.appendChild(individualRejected);
+        allReject.appendChild(card);
+        status.innerText = "Rejected";
     }
     if(clickedElement.classList.contains('delete')){
         

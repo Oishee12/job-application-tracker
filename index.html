@@ -83,7 +83,7 @@
         </div>
 
         <!-- all job circular here -->
-        <section>
+        <section id="jobs-container">
             <section id="all-job">
             <div class="job-card">
                 <div class="bg-white p-3 my-10 rounded-lg border border-gray-300 individual-job">
@@ -96,8 +96,9 @@
 
                     <p class="grey">Remote • Full-time • $130,000 - $175,000</p>
                     <br>
-                    <button id="first-job-interview-show"
-                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
+                    <button
+                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600 not-applied-btn">Not Applied</button>
+
                     <p class="grey">Build cross-platform mobile applications using React Native. Work on products used
                         by millions of users worldwide.</p>
                     <br>
@@ -116,13 +117,9 @@
                     </div>
                     <p class="grey">Web Designer & Developer</p><br>
                     <p class="grey">Los Angeles, CA • Part-time • $80,000 - $120,000</p><br>
-                    <button id="second-job-interview-show"
-                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
-                    <button id="second-job-interview-hidden"
-                        class="btn btn-outline btn-success hidden">Interview</button>
-                    <button id="second-job-rejected-hidden" class="btn btn-outline btn-error hidden">
-                        Rejected
-                    </button>
+                    <button
+                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600 not-applied-btn">Not Applied</button>
+                   
                     <p class="grey">Create stunning web experiences for high-profile clients. Must have portfolio and
                         experience with modern web design trends.</p>
                     <br>
@@ -142,8 +139,8 @@
                     <p class="grey">Data Visualization Specialist</p><br>
                     <p class="grey">Boston, MA • Full-time • $125,000 - $165,000</p>
                     <br>
-                    <button id="third-job-interview-show"
-                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
+                    <button
+                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600 not-applied-btn">Not Applied</button>
                     
                     <p class="grey">Transform complex data into compelling visualizations. Required skills: D3.js,
                         React, and strong analytical thinking.</p>
@@ -165,8 +162,8 @@
                     <p class="grey">Backend Developer</p><br>
                     <p class="grey">Seattle, WA • Full-time • $140,000 - $190,000</p>
                     <br>
-                    <button id="forth-job-interview-show"
-                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
+                    <button
+                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600 not-applied-btn">Not Applied</button>
 
                     <p class="grey">Design and maintain scalable backend systems using Python and AWS. Work with modern
                         DevOps practices and cloud infrastructure.</p>
@@ -187,8 +184,8 @@
                     </div>
                     <p class="grey">UI/UX Engineer</p><br>
                     <p class="grey">Austin, TX • Full-time • $110,000 - $150,000</p><br>
-                    <button id="fifth-job-interview-show"
-                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
+                    <button
+                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600 not-applied-btn">Not Applied</button>
                    
                     <p class="grey">Create beautiful and functional user interfaces for our suite of products. Strong
                         design skills and frontend development expertise required.</p>
@@ -209,8 +206,8 @@
                     </div>
                     <p class="grey">JavaScript Developer</p><br>
                     <p class="grey">New York, NY • Full-time • $130,000 - $170,00</p><br>
-                    <button id="sixth-job-interview-show"
-                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
+                    <button
+                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600 not-applied-btn">Not Applied</button>
                     
                     <p class="grey">Build enterprise applications with JavaScript and modern frameworks. We offer
                         competitive compensation, health insurance, and professional development opportunities.</p>
@@ -231,8 +228,8 @@
                     </div>
                     <p class="grey">Full Stack Engineer</p><br>
                     <p class="grey">Remote • Full-time • $120,000 - $160,000</p><br>
-                    <button id="seventh-job-interview-show"
-                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
+                    <button
+                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600 not-applied-btn">Not Applied</button>
                     
                     <p class="grey">Join our fast-growing startup and work on our core platform. Experience with Node.js
                         and React required. Great benefits and equity package included.</p>
@@ -253,15 +250,15 @@
                     </div>
                     <p class="grey">Senior Frontend Developer</p><br>
                     <p class="grey">San Francisco, CA • Full-time • $130,000 - $175,000</p><br>
-                    <button id="eighth-job-interview-show"
-                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600">Not Applied</button>
+                    <button
+                        class="btn btn-outline bg-[#e4edfd] border-none mb-1 text-gray-600 not-applied-btn">Not Applied</button>
                     
                     <p class="grey">We are looking for an experienced Frontend Developer to build scalable web
                         applications using React and TypeScript. You will work with a talented team on cutting-edge
                         projects.</p>
                     <br>
 
-                    <button id="eighth-job-interview" class="btn btn-outline btn-success interview">Interview</button>
+                    <button class="btn btn-outline btn-success interview">Interview</button>
                     <button id="eighth-job-rejected" class="btn btn-outline btn-error rejected">
                         Rejected
                     </button>
@@ -270,11 +267,11 @@
         </section>
         <!-- interview -->
         <section id="all-interview" class="hidden">
-            <h1>interview section</h1>
+            
         </section>
         <!-- rejected -->
         <section id="all-reject" class="hidden">
-            <h1>rejected section</h1>
+            
         </section>
         </section>
 
