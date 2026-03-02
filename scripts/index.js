@@ -37,6 +37,22 @@ function switchedTab(tab){
     }
 }
 switchedTab(currentTab);
-
+// 8 shows in the total badge
 const total = document.getElementById('total-job');
 total.innerText = allJob.children.length;
+
+// event delegation for interview, rejected and delete btn
+document.getElementById('all-job').addEventListener('click', function(event){
+    const clickedElement  = event.target;
+    if(clickedElement.classList.contains('interview')){
+       const individualInterview = clickedElement.closest(".job-card");
+         allInterview.appendChild(individualInterview);
+    }
+    if(clickedElement.classList.contains('rejected')){
+        const individualRejected = clickedElement.closest(".job-card");
+        allReject.appendChild(individualRejected);
+    }
+    if(clickedElement.classList.contains('delete')){
+        
+    }
+})
